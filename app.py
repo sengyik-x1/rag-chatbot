@@ -15,7 +15,7 @@ st.set_page_config(
     layout="centered",
 )
 
-openai_client = OpenAI()
+openai_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 chroma_client = chromadb.PersistentClient(path="./chroma_db")
 
 COLLECTION_NAME = "streamlit_docs"
